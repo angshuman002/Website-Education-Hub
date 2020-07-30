@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Education Hub</title>
+<link rel="stylesheet" href="layout.css" type="text/css">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4XbBXjchL6h7MKDAGFCvqf0xF1epp4Ig",
+    authDomain: "education-hub-f3144.firebaseapp.com",
+    databaseURL: "https://education-hub-f3144.firebaseio.com",
+    projectId: "education-hub-f3144",
+    storageBucket: "education-hub-f3144.appspot.com",
+    messagingSenderId: "92914014019",
+    appId: "1:92914014019:web:fa851eacaeca817c8641f6",
+    measurementId: "G-EE311F58M6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  function validateForm() 
+  {
+     var x = document.forms["myForm"]["fname"].value;
+     if (x == "") 
+     {
+     alert("First Name must be filled out");
+     return false;
+     }
+
+
+
+     var y = document.forms["myForm"]["lname"].value;
+     if (y == "") 
+     {
+     alert("Last Name must be filled out");
+     return false;
+     }
+
+
+
+
+     var z = document.forms["myForm"]["Email"].value;
+     if (z == "") 
+     {
+     alert("Email must be filled out");
+     return false;
+     }
+
+
+
+     var a = document.forms["myForm"]["Number"].value;
+     if (a == "") 
+     {
+     alert("Number must be filled out");
+     return false;
+     }
+     
+     var p=document.getElementById('password121').value;
+
+     /*var p = document.form["myForm"]["password1"].value;*/
+     if (p == "") 
+     {
+     alert("Create a password");
+     return false;
+     }
+
+
+     if(document.myForm.password1.value!=document.myForm.password2.value)
+     {
+     alert("Password doesn't match");
+     return false;
+     }
+
+
+     if(document.myForm.password1.value==document.myForm.password2.value)
+     {
+     alert("signup Successful.....");
+     }
+
+ }
+
+
+
+
+
+function signup() {
+  alert("Signup Successful..............");
+}
+
+function signin() {
+  alert("Signin Successful..............");
+}
+
+function foot1(){
+  alert(" This is about Us                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot2(){
+  alert(" This is Contact 787875875                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot3(){
+  alert(" Contribute Us                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot4(){
+  alert(" This is our Privacy Policy                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot5(){
+  alert(" This is our Sitemap                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot6(){
+  alert(" facebook Loading.........facebook Loading.........facebook Loading.........");
+}
+function foot7(){
+  alert(" twitter Loading........twitter Loading........twitter Loading........");
+}
+function foot8(){
+  alert("linkedin Loading........linkedin Loading........linkedin Loading........");
+}
+
+
+
+
+
+</script>
+
+<body>
+
+
+
+<div class="wrapper row1" style="position:fixed;margin-top:-100px;background-image:url(navpic.jpg);height:130px;">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1 class="headline"><a href="index.html" style="background-color: transparent;margin-left:-130px;">Education Hub</a></h1>
+      <h2 style="margin-left:-130px;">Best Place for your Solution</h2>
+    </div>
+    <nav>
+      <ul style="margin-right:-220px;">
+        <button onclick="document.getElementById('id01').style.display='block'" class="bt111"><li style=" font-family:'Caveat', cursive;font-size:20px;color:white">Subscribe</li></button>
+        
+      </ul>
+    </nav>
+    <nav>
+      <ul style="margin-right:100px;">
+        <li ><a href="Physics.html" style="font-size:20px;">Physics</a></li>
+        <li><a href="Chemistry.html" style="font-size:20px;">Chemistry</a></li>
+        <li><a href="Math.html" style="font-size:20px;">Mathematics</a></li>
+        <li><a href="Computer.html" style="font-size:20px;">Computer</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+
+
+
+
+<div id="id01" class="modal">
+  <span style="margin-top:50px;margin-right:50px;" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content"  name="myForm" onsubmit="return validateForm()">
+    <div class="con">
+      <p style="margin-left:230px;font-size: 35px;margin-top:50px;margin-bottom:-5px;">Subscrie Us</p>
+      <hr>
+      <center>
+
+         First name : <input type = "text" name = "fname" placeholder="First_Name"><br/>
+         Last name : <input type = "text" name = "lname" placeholder="Last_Name" ><br/>
+         E.mail ID :  <input type = "email" name = "Email" placeholder="xyx@gmail.com" ><br>
+         Mobile Number:<input type = "number" name = "Number" placeholder="12******89" style="margin-left:30px;" maxlength="10" 
+         id="getvalue">
+
+         
+         <input type="submit"  value="Subscribe" class="bt111" style="font-size:25px;margin-bottom:20px;position: relative;margin-right:80px;margin-top: 40px;" onclick="validateForm();">
+      </center>   
+         
+
+    </div>
+  </form>
+</div>
+
+
+
+
+
+<div class="wrapper row2"  style="margin-top:100px;background-image: url(mainpic.jpg);background-repeat:no-repeat;background-position: center;">
+  <div id="container" class="clear">
+
+
+    <div id="homepage" style="margin-top:100px;">
+   
+      
+
+      <section id="services" class="clear">
+        
+
+       
+
+
+
+
+        <article class="one_third" style="margin-left:-80px;">
+          <h2 style="color: white;font-size:40px;">Study Material</h2>
+          <img src="f1.jpg" alt="" class="imagehv">
+          <p style="color:white;font-size:20px;">
+          Study guides can be broad based to facilitate learning in a number of areas, or be resources that foster comprehension of literature, research topics, history, and other subjects.General topics include study and testing strategies; reading, writing, classroom, and project management skills; as well as techniques for learning as an adult, with disabilities, and online. Some will summarize chapters of novels or the important elements of the subject. Study guides for math and science often present problems (as in problem-based learning) and will offer techniques of resolution.
+          </p>
+          
+        </article>
+
+
+        <article class="one_third" style="margin-left:50px;">
+          <h2 style="color: white;font-size:40px;">Class Notes</h2>
+          <img src="f2.jpg" alt="" class="imagehv">
+          <p style="color: white;font-size:20px;">
+          Class Notes (sometimes written as notetaking or note taking) is the practice of recording information captured from another source. By taking notes, the writer records the essence of the information, freeing their mind from having to recall everything.[1] Notes are commonly drawn from a transient source, such as an oral discussion at a meeting, or a lecture (notes of a meeting are usually called minutes), in which case the notes may be the only record of the event. Note taking is a form of self discipline.
+          </p>
+           
+        </article>
+
+
+
+        <article class="one_third lastbox" style="margin-left:30px;">
+          <h2 style="color: white;font-size:40px;">Previous Paper</h2>
+          <img src="f3.jpg" alt="" class="imagehv">
+          <p style="color: white;font-size:20px;">
+          A past paper is an examination paper from a previous year or previous years, usually used either for exam practice or for tests such as University of Oxford,[1] University of Cambridge[2] College Collections.Exam candidates find past papers valuable in test preparation. Some organizations responsible for holding exams have made past exam papers commercially available by either publishing the papers by themselves or licensing a publisher to do the same. For example, UPSC papers in India, SAT papers in U.S. and GCSE and A level papers in UK are being sold, as well as other exams worldwide.
+          </p>
+         
+        </article>
+      </section>
+
+    </div>
+    
+  </div>
+</div>
+
+
+
+<div class="wrapper row3" >
+   
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+          	<center>
+            <h6 style="font-size:25px;">About</h6>
+            <p class="text-justify" style="font-size:18px;">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </center>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6 style="margin-left:100px;font-size:27px;">Quick Links</h6>
+               <ul class="footer-links" style="margin-left:100px;">
+                   <li><a href="#" onclick="foot1()" style="background-color: transparent;font-size:18px;">About Us</a></li>
+                   <li><a href="#" onclick="foot2()" style="background-color: transparent;font-size:18px;">Contact Us</a></li>
+                   <li><a href="#" onclick="foot3()" style="background-color: transparent;font-size:18px;">Contribute</a></li>
+                   <li><a href="#" onclick="foot4()" style="background-color: transparent;font-size:18px;">Privacy Policy</a></li>
+                   <li><a href="#" onclick="foot5()" style="background-color: transparent;font-size:18px;">Sitemap</a></li>
+               </ul>
+         </div>
+       </div>
+              <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text" style="margin-left:100px;font-size:18px;">Copyright &copy; 2017 All Rights Reserved by Education Hub
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons" style="margin-right:650px;">
+              <li><a class="facebook" onclick="foot6()" href="#" style="margin:5px;font-size:25px;"><i class="fa fa-facebook">fa</i></a></li>
+              <li><a class="twitter" onclick="foot7()" href="#" style="margin:5px;font-size:25px;"><i class="fa fa-twitter">te</i></a></li>
+              <li><a class="linkedin" onclick="foot8()" href="#" style="margin:5px;font-size:25px;"><i class="fa fa-linkedin">ln</i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+   </footer>
+</div>
+</body>
+</html>

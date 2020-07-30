@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Education Physics</title>
+<link rel="stylesheet" href="layout.css" type="text/css">
+</head>
+<body>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD4XbBXjchL6h7MKDAGFCvqf0xF1epp4Ig",
+    authDomain: "education-hub-f3144.firebaseapp.com",
+    databaseURL: "https://education-hub-f3144.firebaseio.com",
+    projectId: "education-hub-f3144",
+    storageBucket: "education-hub-f3144.appspot.com",
+    messagingSenderId: "92914014019",
+    appId: "1:92914014019:web:fa851eacaeca817c8641f6",
+    measurementId: "G-EE311F58M6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+     downloadfile1(){
+        var storage = firebase.storage();
+        var storageRef = storage.ref('Physics Book No.pdf').getDownloadURL();
+     
+
+        storageRef.child('Physics Book No.pdf').getDownloadURL().then(function(url) {
+ 
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+        xhr.onload = function(event) {
+        var blob = xhr.response;
+        };
+        xhr.open('GET', url);
+        xhr.send();
+
+  
+        var img = document.getElementById('myimg');
+        img.src = url;
+        }).catch(function(error) {
+  
+       });
+      }
+
+</script>
+
+
+
+
+
+
+
+
+<div class="wrapper row1" style="position:fixed;margin-top:-100px;background-image:url(navpic.jpg);height:130px;">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1 class="headline"><a href="index.html" style="background-color: transparent;margin-left:-130px;">Education Hub</a></h1>
+      <h2 style="margin-left:-130px;">Best Place for your Solution</h2>
+    </div>
+    <nav>
+
+      <ul style="margin-right:100px;">
+        <li><a href="Physics.html" style="color:#FF9900;font-size:20px;">Physics</a></li>
+        <li><a href="Chemistry.html" style="font-size:20px;">Chemistry</a></li>
+        <li><a href="Math.html" style="font-size:20px;">Mathematics</a></li>
+        <li><a href="Computer.html" style="font-size:20px;">Computer</a></li>
+        
+      </ul>
+      
+    </nav>
+  </header>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="downloadbox1" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 1</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download(),downloadfile1()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox2" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 2</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox3" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 3</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox4" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 4</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox5" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 5</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox6" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 6</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox7" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 7</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+<div id="downloadbox8" class="modal" style="height:200px;width:600px;border-radius:20px;margin-top: 20px; background-color:rgb(0,0,0,0.7);left: 500px;">
+   <h2 style="font-size:25px;color:white;text-align:center;margin-bottom:20px;">Do you want to downlad Physics Book 8</h2>
+   <img src="download.gif" height="90px" width="95%" style="background-size:cover;border-radius:20px;">
+   <center>
+   <button class="bt222"  onclick="closebox(),download()" style="margin-right:50px;margin-top: 10px;width:70px;"><li  style=" list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >YES</li></button>
+   <button onclick="closebox(),downloadst()" class="bt222" style="margin-top: 10px;width:70px;"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:white;" >NO</li></button>
+   </center>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="wrapper row2"  style="margin-top:100px;background-image: url(mainpic.jpg);background-repeat:no-repeat;background-position: center;background-size:cover;">
+  <div id="container" class="clear">
+  
+    <section id="slider" class="clear" style="margin-top:30px;">
+      <figure>
+        <figcaption style="background-color: transparent;">
+          <h2 style="font-size:85px;color:white;margin-left:350px;">Physics</h2>
+          <p style="font-size:25px;color:white;text-align: center;">Physics is the natural science that studies matter, its motion, and behavior through space and time, and that studies the related entities of energy and force. Physics is one of the most fundamental scientific disciplines, and its main goal is to understand how the universe behaves.</p>
+          
+        </figcaption>
+      </figure>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="latest" class="last clear">
+        <article class="one_quarter">
+          <figure><a href="" onclick="downloadbook()"><img class="pic" src="p1.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;margin-left:10px;">Physics No1</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+              <button onclick="document.getElementById('downloadbox1').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+        <article class="one_quarter">
+          <figure><a href="" onclick="downloadbook()" ><img class="pic" src="p2.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;margin-left:10px;">Physics No2</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+              <button onclick="document.getElementById('downloadbox2').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+        <article class="one_quarter">
+          <figure><a href="" onclick="downloadbook()"><img class="pic" src="p3.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;">Physics No3</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+             <button onclick="document.getElementById('downloadbox3').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+        <article class="one_quarter lastbox">
+          <figure><a href="" onclick="downloadbook()" ><img class="pic" src="p4.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;">Physics No4</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+              <button onclick="document.getElementById('downloadbox4').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+      </section>
+
+      
+
+      <section id="latest" class="last clear">
+
+
+        <article class="one_quarter"> 
+          <figure><a href="" onclick="downloadbook()" ><img class="pic" src="p5.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;">Physics No5</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+              <button onclick="document.getElementById('downloadbox5').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+        <article class="one_quarter">
+          <figure><a href="" onclick="downloadbook()"><img class="pic" src="p6.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;">Physics No6</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+              <button onclick="document.getElementById('downloadbox6').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+        <article class="one_quarter">
+          <figure><a href="" onclick="downloadbook()"><img class="pic" src="p7.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;">Physics No7</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+              <button onclick="document.getElementById('downloadbox7').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+        <article class="one_quarter lastbox">
+          <figure><a href="" onclick="downloadbook()"><img class="pic" src="p8.jpg" width="210" height="320" alt="" style="border-radius:20px;"></a>
+            <figcaption>
+              <h2 style="font-size:22px;margin-top:20px;">Physics No8</h2>
+              <p style="font-size:18px;">Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+             <button onclick="document.getElementById('downloadbox8').style.display='block'" class="bt"><li  style="list-style: none; font-family:'Caveat', cursive;font-size:25px;color:#997723;">Download</li></button>
+            </figcaption>
+          </figure>
+        </article>
+
+
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper row3">
+   
+     <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <center>
+            <h6 style="font-size:25px;">About</h6>
+            <p class="text-justify" style="font-size:18px;">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+            </center>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6 style="margin-left:100px;font-size:27px;">Quick Links</h6>
+               <ul class="footer-links" style="margin-left:100px;">
+                   <li><a onclick="foot1()" href="#" style="background-color: transparent;font-size:18px;">About Us</a></li>
+                   <li><a onclick="foot2()" href="#" style="background-color: transparent;font-size:18px;">Contact Us</a></li>
+                   <li><a onclick="foot3()" href="#" style="background-color: transparent;font-size:18px;">Contribute</a></li>
+                   <li><a onclick="foot4()" href="#" style="background-color: transparent;font-size:18px;">Privacy Policy</a></li>
+                   <li><a onclick="foot5()" href="#" style="background-color: transparent;font-size:18px;">Sitemap</a></li>
+               </ul>
+         </div>
+       </div>
+              <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text" style="margin-left:100px;font-size:18px;">Copyright &copy; 2017 All Rights Reserved by Education Hub
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons" style="margin-right:650px;">
+              <li><a onclick="foot6()" class="facebook" href="#" style="margin:5px;font-size:25px;"><i class="fa fa-facebook">fa</i></a></li>
+              <li><a onclick="foot7()" class="twitter" href="#" style="margin:5px;font-size:25px;"><i class="fa fa-twitter">te</i></a></li>
+              <li><a onclick="foot8()" class="linkedin" href="#" style="margin:5px;font-size:25px;"><i class="fa fa-linkedin">ln</i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+   </footer>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+function foot1(){
+  alert(" This is about Us                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot2(){
+  alert(" This is Contact 787875875                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot3(){
+  alert(" Contribute Us                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot4(){
+  alert(" This is our Privacy Policy                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot5(){
+  alert(" This is our Sitemap                                                                                                                           We are here to deliver solutions to your mission-critical content management needs.Tell us what you are hoping to accomplish with Box and how we can help modernize the way your organization works.");
+}
+function foot6(){
+  alert(" facebook Loading.........facebook Loading.........facebook Loading.........");
+}
+function foot7(){
+  alert(" twitter Loading........twitter Loading........twitter Loading........");
+}
+function foot8(){
+  alert("linkedin Loading........linkedin Loading........linkedin Loading........");
+}
+function closebox(){
+  document.getElementById('downloadbox').style.display='none'
+}
+
+function download(){
+  alert("Start Downloading..........");
+}
+function downloadst(){
+  alert("Cancelled Downloading..........");
+}
+
+</script>
+</html>
+
